@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1726007593 source:c:\users\abdelilah\documents\codeblocks\projet de sas 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
