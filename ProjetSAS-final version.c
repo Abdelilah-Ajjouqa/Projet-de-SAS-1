@@ -79,8 +79,11 @@ case 5:
 case 6:
     Rechercher();
     break;
-case 7.
+case 7:
     Trier();
+    break;
+case 0:
+break;
 default:
     break;
 }
@@ -463,7 +466,7 @@ void Statistique()
     for (i=0; i<compteur; i++)
     {
         total[Etudiants[i].departement - 1]++;
-        //Classement les etudiants(Tri)
+///Classement les etudiants(Tri)
         for (int j = 0; j < 3; j++)
         {
             if (Etudiants[i].note_generale > Top[j].note_generale)
@@ -632,8 +635,8 @@ void Trier()
         case 1:
 /// Tri par nom:
             printf("\nChoisissez comment vou pouvez faire l'ordre de tri :\n");
-            printf("1-A a Z\n");
-            printf("2-Z a A\n");
+            printf("1-Croissant (A a Z)\n");
+            printf("2-Decroissant (Z a A)\n");
             scanf("%d", &ordre);
             for (int i=0; i<compteur-1; i++)
             {
@@ -648,6 +651,7 @@ void Trier()
                 }
             }
             printf("\nTri par nom est complete.\n");
+            goto deepart;
             break;
 
         case 2:
@@ -669,6 +673,7 @@ void Trier()
                 }
             }
             printf("\nTri par moyenne generale est complete.\n");
+            goto deepart;
             break;
 
         case 3:
@@ -681,6 +686,7 @@ void Trier()
                    printf("%s %s (Id: %d) - Note generale : %.2f\n", Etudiants[i].nom, Etudiants[i].prenom, Etudiants[i].id, Etudiants[i].note_generale);
                 }
             }
+            goto deepart;
             break;
 
         default:
@@ -694,3 +700,5 @@ void Trier()
 
     }
 }
+
+
