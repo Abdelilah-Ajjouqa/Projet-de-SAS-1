@@ -79,10 +79,25 @@ case 5:
 case 6:
     Rechercher();
     break;
+case 7.
+    Trier();
 default:
     break;
 }
 }
+
+char* DepartementNOM(int DepartementChoix)
+{
+   switch(DepartementChoix)
+   {
+       case 1: return "Sience Mathematique";
+       case 2: return "Sience Physique et Chimie";
+       case 3: return "Sience de Vie et Terre (SVT)";
+       case 4: return "Philosophie";
+       case 5: return "Informatique";
+   }
+}
+
 
 void Ajouter()
 {
@@ -235,7 +250,7 @@ main();
 
 void Afficher()
 {
-    if (compteur == 0)
+    if(compteur==0)
     {
         printf("\nAucun etudiant n'a encore ete ajoute.\n");
     }
@@ -251,7 +266,7 @@ void Afficher()
             printf("Date de naissance : %02d/%02d/%d\n", Etudiants[i].date_de_naissance.jour,
                     Etudiants[i].date_de_naissance.mois,
                     Etudiants[i].date_de_naissance.annee);
-            printf("Departement : %d\n", Etudiants[i].departement);
+            printf("Departement : %s\n", DepartementNOM(Etudiants[i].departement));
             printf("Note generale : %.2f\n", Etudiants[i].note_generale);
         }
     }
